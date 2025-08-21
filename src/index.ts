@@ -10,7 +10,7 @@ const app = createHonoApp();
 app.use(
     "/api/auth/**",
     cors({
-        origin: "*", // In production, replace with your actual domain
+        origin: ["http://localhost:3000", "https://spezi.health"], // In production, replace with your actual domain
         allowHeaders: ["Content-Type", "Authorization"],
         allowMethods: ["POST", "GET", "OPTIONS"],
         exposeHeaders: ["Content-Length"],

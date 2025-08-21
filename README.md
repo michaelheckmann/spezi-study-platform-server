@@ -1,6 +1,8 @@
 # Spezi Study Platform Server
 
-This project is a backend server for the Spezi Study Platform, providing authentication and various endpoints (e.g. team and study management).
+This project is a simple backend server for the Spezi Study Platform, providing authentication and various endpoints (e.g. team and study management).
+It follows the OpenAPI spec provided by [spezi-web-study-platform](https://github.com/StanfordSpezi/spezi-web-study-platform).
+This temporary server solution will be used to power the backend for [spezi.health/spezi-web-study-platform](http://spezi.health/spezi-web-study-platform/) until there is a proper backend implemented for it.
 
 ## Features
 
@@ -55,9 +57,9 @@ This project is a backend server for the Spezi Study Platform, providing authent
 
 3. **Start the development server locally**:
 
-```sh
-bun run dev
-```
+    ```sh
+    bun run dev
+    ```
 
 ## API Overview
 
@@ -66,12 +68,6 @@ bun run dev
 -   **Studies**: `/studies/*`
 
 See the [src/routes](src/routes) directory for detailed route handlers.
-
-## Configuration
-
--   **`wrangler.toml`**: Cloudflare Worker settings.
--   **`drizzle.config.ts`**: Database connection and migration settings.
--   **`tsconfig.json`**: TypeScript compiler options.
 
 ## Scripts
 

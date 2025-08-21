@@ -1,0 +1,80 @@
+INSERT INTO
+    "users" (
+        "id",
+        "name",
+        "email",
+        "email_verified",
+        "image",
+        "created_at",
+        "updated_at",
+        "is_anonymous"
+    )
+VALUES
+    (
+        '2VlYZhSWVArin1IaBhTRca1W0SD7U2Pn',
+        'Vincent Orlowski',
+        'vincent_00@example.com',
+        '0',
+        'https://avatars.githubusercontent.com/u/133281989?s=200&v=4',
+        '1755775714',
+        '1755775714',
+        NULL
+    ),
+    (
+        'QO6DtlXZSnlnaaiz989kSEoEZs3XAzOc',
+        'Naomi Price',
+        'naomiprice@example.com',
+        '0',
+        NULL,
+        '1755775714',
+        '1755775714',
+        NULL
+    );
+
+INSERT INTO
+    "accounts" (
+        "id",
+        "account_id",
+        "provider_id",
+        "user_id",
+        "access_token",
+        "refresh_token",
+        "id_token",
+        "access_token_expires_at",
+        "refresh_token_expires_at",
+        "scope",
+        "password",
+        "created_at",
+        "updated_at"
+    )
+VALUES
+    (
+        '6OlMfiPLNUOlKKAeyWn9j249f3H037ym',
+        '2VlYZhSWVArin1IaBhTRca1W0SD7U2Pn',
+        'credential',
+        '2VlYZhSWVArin1IaBhTRca1W0SD7U2Pn',
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        '723968f1bbbafa5ec8e48cdcde81ac2b:3129ef40591332f4a72b72defdc33d5364e4154e9844ae6003891b79dff73ef19b4876894cf65d5119255847da8b4749fc63ab3ac42c5d0708d97cb6bcf51c12',
+        '1755775714',
+        '1755775714'
+    ),
+    (
+        'F1Qa2JP1ywcvRkS4zcxtK3z1RCVWrH9C',
+        'QO6DtlXZSnlnaaiz989kSEoEZs3XAzOc',
+        'credential',
+        'QO6DtlXZSnlnaaiz989kSEoEZs3XAzOc',
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        'f8963045578ea80755b730daa1e71cbd:773bd1bb97467ee0961915b63948c4d63a254f9708df642ef482b5c91b4e6ee1224e5a9ebdea45d20fc5f599c0114325dfe09186dae34e22ea00576610a81737',
+        '1755775714',
+        '1755775714'
+    );
