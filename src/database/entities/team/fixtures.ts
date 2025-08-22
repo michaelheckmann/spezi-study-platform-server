@@ -9,29 +9,24 @@
 import type { Team } from "./schema";
 
 export const teamFixtures: Team[] = [
-  {
-    id: "team_pine",
-    name: "Team Pine",
-    icon: "tree-pine",
-  },
-  {
-    id: "team_tree",
-    name: "Team Tree",
-    icon: "tent-tree",
-  },
-  {
-    id: "team_palm",
-    name: "Team Palm",
-    icon: "tree-palm",
-  },
-  {
-    id: "team_flower",
-    name: "Team Flower",
-    icon: "flower",
-  },
-  {
-    id: "team_mountain",
-    name: "Team Mountain",
-    icon: "mountain",
-  },
+    {
+        id: "team_pine",
+        name: "Team Pine",
+        icon: "tree-pine",
+    },
+    {
+        id: "team_tree",
+        name: "Team Tree",
+        icon: "tent-tree",
+    },
+    {
+        id: "team_palm",
+        name: "Team Palm",
+        icon: "tree-palm",
+    },
+    {
+        id: "team_flower",
+        name: "Team Flower",
+        icon: "flower",
+    },
 ];

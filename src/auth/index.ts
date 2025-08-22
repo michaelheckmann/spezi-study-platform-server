@@ -14,14 +14,14 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
         ...withCloudflare(
             {
                 autoDetectIpAddress: true,
-                geolocationTracking: true,
+                geolocationTracking: false,
                 cf: cf || {},
                 d1: env
                     ? {
                           db,
                           options: {
                               usePlural: true,
-                              debugLogs: true,
+                              //   debugLogs: true,
                           },
                       }
                     : undefined,
@@ -34,6 +34,7 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 rateLimit: {
                     enabled: true,
                 },
+                trustedOrigins: ["http://localhost:3000", "https://spezi.health"],
             }
         ),
         // Only add database adapter for CLI schema generation
@@ -43,7 +44,7 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                   database: drizzleAdapter({} as D1Database, {
                       provider: "sqlite",
                       usePlural: true,
-                      debugLogs: true,
+                      //   debugLogs: true,
                   }),
               }),
     });

@@ -2,15 +2,16 @@ import { cors } from "hono/cors";
 import { createAuth } from "./auth";
 import studiesRouter from "./routes/studies";
 import teamsRouter from "./routes/teams";
+import usersRouter from "./routes/users";
 import { createHonoApp } from "./utils/create-hono-app";
 
 const app = createHonoApp();
 
 // CORS configuration for auth routes
 app.use(
-    "/api/auth/**",
+    "/api/*",
     cors({
-        origin: ["http://localhost:3000", "https://spezi.health"], // In production, replace with your actual domain
+        origin: ["http://localhost:3000", "https://spezi.health"],
         allowHeaders: ["Content-Type", "Authorization"],
         allowMethods: ["POST", "GET", "OPTIONS"],
         exposeHeaders: ["Content-Length"],
@@ -34,6 +35,7 @@ app.all("/api/auth/*", async c => {
 
 app.route("/api", studiesRouter);
 app.route("/api", teamsRouter);
+app.route("/api", usersRouter);
 
 app.get("/health", c => {
     return c.json({ status: "ok", timestamp: new Date().toISOString() });
