@@ -7,7 +7,6 @@ import { createHonoApp } from "./utils/create-hono-app";
 
 const app = createHonoApp();
 
-// CORS configuration for auth routes
 app.use(
     "/api/*",
     cors({
