@@ -41,6 +41,12 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                     crossSubDomainCookies: {
                         enabled: true,
                     },
+                    defaultCookieAttributes: {
+                        secure: true,
+                        httpOnly: true,
+                        sameSite: "None",
+                        partitioned: true,
+                    },
                 },
             }
         ),
