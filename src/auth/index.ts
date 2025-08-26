@@ -37,6 +37,9 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 trustedOrigins: ["http://localhost:3000", "https://spezi.health"],
                 advanced: {
                     cookiePrefix: "spezi",
+                    crossSubDomainCookies: {
+                        enabled: true,
+                    },
                 },
             }
         ),
