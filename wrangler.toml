@@ -5,6 +5,8 @@ name = "spezi-study-platform-server"
 main = "src/index.ts"
 compatibility_date = "2025-03-01"
 compatibility_flags = ["nodejs_compat"]
+preview_urls = false
+
 
 [observability]
 enabled = true
